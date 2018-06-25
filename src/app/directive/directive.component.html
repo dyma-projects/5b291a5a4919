@@ -1,0 +1,20 @@
+<p>{{ liaison1 }}</p>
+<p>
+	<input type="{{ liaison2 }}" />
+	<select (input)="changeInput($event)">
+		<option value="date">Date</option>
+		<option value="number">Number</option>
+		<option value="text">Text</option>
+	</select>
+</p>
+<div>
+	<input type="text" [(ngModel)]='liaison3' />
+	<p>Hello {{liaison3}} !</p>
+</div>
+
+<button type="button" (click)="changeStatus($event)">Bouton de la 7ème instruction</button>
+<p *ngIf='status'>p1</p>
+<p *ngIf='!status'>p2</p>
+<ul>
+	<li *ngFor='let text of texts'>{{text}}</li>
+</ul>
